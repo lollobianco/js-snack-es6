@@ -25,7 +25,8 @@ let students = [
 ];
 
 let upperNames = [];
-let gradesAndId = [];
+let niceGradesString = '';
+let gradesAndIdString = '';
 //console.log(students)
 
 //ARRAY NOMI IN MAIUSCOLO
@@ -48,6 +49,24 @@ let niceGrades = students.filter((element) => {
 
 });
 
-console.log(niceGrades.name);
+for(let i = 0; i < niceGrades.length; i++){
+   niceGradesString += `${niceGrades[i].name}: ${niceGrades[i].grades}, `
+}
 
-console.log (`Studenti con il voto superiore a 70 (${niceGrades.length}): ${niceGrades}`)
+console.log (`Gli studenti con un totale di voti maggiore a 70 sono ${niceGrades.length}: ${niceGradesString}`)
+
+
+
+//ARRAY STUDENTI CON UN TOTALE DI VOTI SUPERIORE A 70 E ID SUPERIORE A 120
+
+let gradesAndId = students.filter((element) => {
+
+   return element.id > 120 && element.grades > 70;
+
+});
+
+for(let i = 0; i < gradesAndId.length; i++){
+   gradesAndIdString += `${gradesAndId[i].name}: ${gradesAndId[i].grades}, `
+}
+
+console.log (`Gli studenti con un totale di voti maggiore a 70 sono ${gradesAndId.length}: ${gradesAndIdString}`)
