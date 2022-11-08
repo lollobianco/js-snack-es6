@@ -27,7 +27,8 @@ let students = [
 let upperNames = [];
 let niceGradesString = '';
 let gradesAndIdString = '';
-//console.log(students)
+
+
 
 //ARRAY NOMI IN MAIUSCOLO
 
@@ -69,4 +70,4 @@ for(let i = 0; i < gradesAndId.length; i++){
    gradesAndIdString += `${gradesAndId[i].name}: ${gradesAndId[i].grades}, `
 }
 
-console.log (`Gli studenti con un totale di voti maggiore a 70 sono ${gradesAndId.length}: ${gradesAndIdString}`)
+console.log (`Gli studenti con un totale di voti maggiore a 70 e id superiore a 120 sono ${gradesAndId.length}: ${gradesAndIdString}`)
