@@ -21,6 +21,8 @@ const bikes = [{
 
 const bikeWeight = [];
 
+let printedBike = document.getElementById('BiciLeggera');
+
 bikes.forEach(({nome, peso}) => {
 
    console.log(peso);
@@ -40,9 +42,11 @@ for (let i = 0; i <= bikes.length; i++) {
    if (bikesElement.peso == lighterBike){
 
       console.log(`la bici più leggera pesa ${lighterBike} Kg ed è la ${bikesElement.nome}`)
-
+      printedBike.innerHTML = `la bici più leggera pesa ${lighterBike} Kg ed è la: ${bikesElement.nome}`
    }
 }
+
+
 
 
 
