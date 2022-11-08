@@ -33,5 +33,16 @@ console.log(bikeWeight);
 
 const lighterBike = Math.min(...bikeWeight);
 
-console.log(`la bici più leggera pesa ${lighterBike} Kg`)
+for (let i = 0; i <= bikes.length; i++) {
+
+   let bikesElement = bikes[i];
+
+   if (bikesElement.peso == lighterBike){
+
+      console.log(`la bici più leggera pesa ${lighterBike} Kg ed è la ${bikesElement.nome}`)
+
+   }
+}
+
+
 
